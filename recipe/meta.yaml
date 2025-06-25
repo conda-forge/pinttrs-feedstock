@@ -1,5 +1,5 @@
 {% set name = "pinttrs" %}
-{% set version = "24.1.0" %}
+{% set version = "25.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pinttrs-{{ version }}.tar.gz
-  sha256: 3ce9716e33b21594aa6950ea292596ce69035531c0a0aedb4d955aafb0a72091
+  sha256: 6bdc2e868e400fed9f734f2b7d1f47dc40ac5f180e574929093c83ebc517d5e3
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
